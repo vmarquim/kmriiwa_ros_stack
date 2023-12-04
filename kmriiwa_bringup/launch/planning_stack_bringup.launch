@@ -3,7 +3,7 @@
   <arg name="use_namespace" default="true" />
   <arg name="robot_name" default="kmriiwa" />
   <arg name="rviz" default="true"/>
-  <arg name="no_static_map" default="false"/>
+  <arg name="no_static_map" default="true"/>
   <arg name="map_file" default="$(find kmriiwa_navigation)/maps/dryLab.yaml" />
   <arg name="base_global_planner" default="navfn/NavfnROS"/>
   <arg name="base_local_planner" default="teb_local_planner/TebLocalPlannerROS" />

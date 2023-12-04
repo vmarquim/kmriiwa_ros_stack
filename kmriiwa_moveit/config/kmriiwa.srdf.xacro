@@ -27,6 +27,7 @@
         <joint name="$(arg robot_name)_joint_6" value="0"/>
         <joint name="$(arg robot_name)_joint_7" value="0"/>
     </group_state>
+    
     <group_state name="drive" group="$(arg robot_name)_manipulator">
         <joint name="$(arg robot_name)_joint_1" value="-1.5603"/>
         <joint name="$(arg robot_name)_joint_2" value="0.3438"/>
@@ -36,6 +37,18 @@
         <joint name="$(arg robot_name)_joint_6" value="0.8827"/>
         <joint name="$(arg robot_name)_joint_7" value="0.662003"/>
     </group_state>
+    
+    <!-- Add calibration joint state for each robot -->
+    <group_state name="vicon_calibration" group="$(arg robot_name)_manipulator">
+        <joint name="$(arg robot_name)_joint_1" value="0.7549"/>
+        <joint name="$(arg robot_name)_joint_2" value="-1.3888"/>
+        <joint name="$(arg robot_name)_joint_3" value="-2.0210"/>
+        <joint name="$(arg robot_name)_joint_4" value="-1.9374"/>
+        <joint name="$(arg robot_name)_joint_5" value="-1.5525"/>
+        <joint name="$(arg robot_name)_joint_6" value="-2.0524"/>
+        <joint name="$(arg robot_name)_joint_7" value="2.0660"/>
+    </group_state>
+    
     <xacro:unless value="$(arg no_virtual_joint)">
         <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
         <virtual_joint name="$(arg robot_name)_base_footprint_map_virtual_joint" type="planar" parent_frame="map" child_link="$(arg robot_name)_base_footprint"/>
